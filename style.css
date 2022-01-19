@@ -15,7 +15,7 @@
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-content: center;
-  height: 200px;
+  height: 400px;
   font-size: 2rem;
   text-align: center;
 }
@@ -52,5 +52,9 @@
 .game-over{
     font-size: 4rem;
     padding: 50px;
-    
+
+}
+
+i{
+    font-size: 10rem;
 }
