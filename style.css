@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#title {
+  text-align: center;
+  line-height: 1.5;
+}
+
+#score {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-content: center;
+  height: 500px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#play-game {
+  border: 2px solid black;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  justify-items: center;
+  align-content: center;
+}
+
+#play-game button {
+  height: 3rem;
+  width: 6rem;
+}
+
+#winner{
+    text-align: center;
+    height: 100px;
+}
