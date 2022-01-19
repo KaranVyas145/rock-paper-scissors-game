@@ -4,20 +4,18 @@
   box-sizing: border-box;
 }
 
+/* The main container class containing all the elements  */
 .container{
   background-image: url(images/markus-spiske-iar-afB0QQw-unsplash.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
-#main{
-  z-index: 1;
-}
 
-
+/* Title  */
 #title {
   text-align: center;
   line-height: 1.5;
@@ -28,6 +26,7 @@
   color: black;
 }
 
+/* Animation for the title  */
 @keyframes to-bottom {
   from{
     bottom: 1000px;
@@ -37,6 +36,7 @@
   }
 }
 
+/* Score Cards */
 #score {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -59,6 +59,13 @@
   font-weight: 700;
 }
 
+i{
+  font-size: 10rem;
+  color: rgb(255, 196, 0);
+}
+
+
+/* Animation class for player score card  */
 .right{
   position: relative;
   animation: to-left 4s ease-out;
@@ -73,6 +80,8 @@
   }
 }
 
+
+/* Animation class for computer score card  */
 .left{
   position: relative;
   animation: to-right 4s ease-out;
@@ -87,6 +96,49 @@
   }
 }
 
+/* The game status  */
+#status{
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+/* The game over message  */
+.game-over{
+    /* font-size: 2rem; */
+    text-align: center;
+    margin: 220px 0 0 0;
+
+}
+
+.game-over button{
+  padding: 30px;
+  margin: 20px 0;
+}
+
+The winning animation
+.winning-animation{
+  position: relative;
+  animation: win 0.5s linear;
+}
+
+@keyframes win {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    font-size: 2.3rem;
+  }
+  100%{
+    transform: rotate(360deg);
+    font-size: 2rem;
+  }
+}
+
+/* The main game used by the user  */
 #play-game {
   height: 200px;
   display: flex;
@@ -102,38 +154,14 @@
   margin: 0 2rem;
 }
 
-#status{
-  height: 140px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  padding: 30px 0;
-  font-size: 2rem;
-}
-
-.game-over{
-    /* font-size: 2rem; */
-    text-align: center;
-    margin: 220px 0 0 0;
-
-}
-
-.game-over button{
-  padding: 30px;
-  margin: 20px 0;
-}
-
-i{
-    font-size: 10rem;
-    color: rgb(255, 196, 0);
-}
+/* Animation class for status and play-game  */
 
 .to-top{
   background-color: black;
   padding: 10px;
   position: relative;
   animation: to-top 4s ease-out;
+  z-index: 1;
 }
 
 @keyframes to-top {
@@ -145,6 +173,7 @@ i{
   }
 }
 
+/* Footer  */
 footer{
   width: 100%;
   text-align: center;
@@ -165,20 +194,3 @@ footer i{
   color: white;
 }
 
-.winning-animation{
-  position: relative;
-  animation: win 0.5s linear;
-}
-
-@keyframes win {
-  0%{
-    transform: rotate(0deg);
-  }
-  50%{
-    font-size: 2.3rem;
-  }
-  100%{
-    transform: rotate(360deg);
-    font-size: 2rem;
-  }
-}
