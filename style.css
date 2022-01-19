@@ -6,13 +6,26 @@
 
 /* The main container class containing all the elements  */
 .container{
-  background-image: url(images/markus-spiske-iar-afB0QQw-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: white;
   height: 100%;
   overflow: hidden;
+  /* position: relative;  */
+  z-index: 1;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(images/markus-spiske-iar-afB0QQw-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+    width: 100%;
+    position: fixed;
 }
 
 /* Title  */
@@ -180,8 +193,8 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0,0,0);
-  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  position: relative;
   /* bottom: 0; */
   /* height: 70px; */
   z-index: 3;
