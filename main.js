@@ -16,15 +16,15 @@ const game = () => {
       const computerChance = computerPlay();
       const playerChance = element.innerText;
       document.getElementById("computer-choice").innerHTML =
-      icons(computerChance);
-      document.getElementById("player-choice").innerHTML =icons(playerChance);
-        
+        icons(computerChance);
+      document.getElementById("player-choice").innerHTML = icons(playerChance);
+
       //   console.log(playerPlay(element.innerText));
       document.getElementById("moves").innerHTML = `Moves left ${10 - moves}`;
       const gameWinner = winner(element.innerText, computerChance);
       //   console.log(gameWinner);
       if (moves === 10) {
-        document.getElementById("play-game").style.display = "none";
+        document.getElementById("play-game").style.visibility = "hidden";
         document.getElementById("moves").style.display = "none";
         //   document.getElementById('winner').style.display="none"
         gameOver(gameWinner);
@@ -35,11 +35,11 @@ const game = () => {
 
   function icons(chance) {
     switch (chance) {
-      case 'ROCK':
+      case "ROCK":
         return `<i class="fas fa-hand-rock"></i>`;
-      case 'SCISSORS':
+      case "SCISSORS":
         return `<i class="fas fa-hand-scissors"></i>`;
-      case 'PAPER':
+      case "PAPER":
         return `<i class="fas fa-hand-paper"></i>`;
     }
   }
@@ -109,7 +109,7 @@ const game = () => {
     document.getElementById(
       "winner"
     ).innerHTML = `${winner} won this game <br> <button id="restart">Restart Game</button>`;
-    document.getElementById("winner").classList = "game-over";
+    document.getElementById("winner").classList = "game-over winning-animation";
 
     const restart = document.getElementById("restart");
     restart.addEventListener("click", () => {

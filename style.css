@@ -4,57 +4,181 @@
   box-sizing: border-box;
 }
 
+.container{
+  background-image: url(images/markus-spiske-iar-afB0QQw-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+#main{
+  z-index: 1;
+}
+
+
 #title {
   text-align: center;
   line-height: 1.5;
+  padding: 20px;
+  background-color: gainsboro;
+  position: relative;
+  animation: to-bottom 1s ease-out;
+  color: black;
+}
+
+@keyframes to-bottom {
+  from{
+    bottom: 1000px;
+  }
+  to{
+    bottom: 0;
+  }
 }
 
 #score {
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-content: center;
-  height: 400px;
   font-size: 2rem;
   text-align: center;
 }
-/* 
-#player-choice, #computer-choice{
-    height: 100px;
-} */
+
+.score-card{
+  background-image: url(images/etienne-martin-v6uiP2MD6vs-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat ;
+  height: 400px;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+}
+
+.right{
+  position: relative;
+  animation: to-left 4s ease-out;
+}
+
+@keyframes to-left {
+  from{
+    right: 1000px;
+  }
+  to{
+    right:  0px;
+  }
+}
+
+.left{
+  position: relative;
+  animation: to-right 4s ease-out;
+}
+
+@keyframes to-right {
+  from{
+    left: 1000px;
+  }
+  to{
+    left:  0px;
+  }
+}
 
 #play-game {
-  border: 2px solid black;
-  height: 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
-  justify-items: center;
-  align-content: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid white; */
+  /* margin: 0 500px; */
 }
 
 #play-game button {
   height: 3rem;
   width: 6rem;
+  margin: 0 2rem;
 }
 
-#winner{
-    text-align: center;
-    height: 50px;
-}
-
-#moves{
-    height: 50px;
-    text-align: center;
+#status{
+  height: 140px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+  font-size: 2rem;
 }
 
 .game-over{
-    font-size: 4rem;
-    padding: 50px;
+    /* font-size: 2rem; */
+    text-align: center;
+    margin: 220px 0 0 0;
 
+}
+
+.game-over button{
+  padding: 30px;
+  margin: 20px 0;
 }
 
 i{
     font-size: 10rem;
+    color: rgb(255, 196, 0);
+}
+
+.to-top{
+  background-color: black;
+  padding: 10px;
+  position: relative;
+  animation: to-top 4s ease-out;
+}
+
+@keyframes to-top {
+  from{
+    top: 1000px;
+  }
+  to{
+    top:0;
+  }
+}
+
+footer{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0,0,0);
+  position: absolute;
+  /* bottom: 0; */
+  /* height: 70px; */
+  z-index: 3;
+  padding: 30px 0;
+}
+
+footer i{
+  font-size: 3rem; 
+  margin: 0 10px;
+  color: white;
+}
+
+.winning-animation{
+  position: relative;
+  animation: win 0.5s linear;
+}
+
+@keyframes win {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    font-size: 2.3rem;
+  }
+  100%{
+    transform: rotate(360deg);
+    font-size: 2rem;
+  }
 }

@@ -5,36 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    <script src="https://kit.fontawesome.com/677e1ac1b8.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/677e1ac1b8.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
     <main id="main">
       <header id="title">
         <h1>Rock Paper Scissors</h1>
         <h2>So you think you can beat a computer?</h2>
       </header>
       <div id="score">
-        <div class="score-card">
+        <div class="score-card right">
           <div id="player-score">0</div>
           <p>Player</p>
           <div id="player-choice"></div>
         </div>
-        <div class="score-card">
+        <div class="score-card left">
           <div id="computer-score">0</div>
           <p>Computer</p>
           <div id="computer-choice"></div>
         </div>
-    </div>
-    <div id="winner"></div>
-    <div id="moves"></div>
-      <div id="play-game">
-        <button id="rockbtn">ROCK</button>
-        <button id="paperbtn">PAPER</button>
-        <button id="scissorbtn">SCISSORS</button>
+      </div>
+      <div class="to-top">
+        <div id="status">
+        <div id="winner" ></div>
+        <div id="moves"></div>
+      </div>
+        <div id="play-game">
+          <button id="rockbtn">ROCK</button>
+          <button id="paperbtn">PAPER</button>
+          <button id="scissorbtn">SCISSORS</button>
+        </div>
       </div>
     </main>
-
+    <footer>
+      <i class="fab fa-github"></i>
+      KaranVyas145
+    </footer>  
+  </div>
     <script src="main.js"></script>
   </body>
 </html>
