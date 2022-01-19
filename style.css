@@ -132,7 +132,7 @@ i{
   margin: 20px 0;
 }
 
-The winning animation
+/* The winning animation */
 .winning-animation{
   position: relative;
   animation: win 0.5s linear;
