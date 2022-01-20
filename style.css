@@ -5,27 +5,26 @@
 }
 
 /* The main container class containing all the elements  */
-.container{
+.container {
   color: white;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
-  /* position: relative;  */
+  font-family: "Architects Daughter", cursive;
   z-index: 1;
 }
 
-.container::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-image: url(images/main-bg.jpeg);
+.container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(images/main-bg.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
-    width: 100%;
-    position: fixed;
+  width: 100%;
 }
 
 /* Title  */
@@ -37,14 +36,15 @@
   position: relative;
   animation: to-bottom 1s ease-out;
   color: black;
+  font-size: 1.4rem;
 }
 
 /* Animation for the title  */
 @keyframes to-bottom {
-  from{
+  from {
     bottom: 1000px;
   }
-  to{
+  to {
     bottom: 0;
   }
 }
@@ -59,58 +59,56 @@
   text-align: center;
 }
 
-.score-card{
-  background-image: url(images/score-card-bg.jpeg);
+.score-card {
+  background-image: url(images/score.png);
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
   height: 400px;
   width: 100%;
   display: grid;
   align-items: center;
-  color: white;
+  color: black;
   font-weight: 700;
 }
 
-i{
+i {
   font-size: 10rem;
   color: rgb(255, 196, 0);
 }
 
-
 /* Animation class for player score card  */
-.right{
+.right {
   position: relative;
   animation: to-left 4s ease-out;
 }
 
 @keyframes to-left {
-  from{
+  from {
     right: 1000px;
   }
-  to{
-    right:  0px;
+  to {
+    right: 0px;
   }
 }
 
-
 /* Animation class for computer score card  */
-.left{
+.left {
   position: relative;
   animation: to-right 4s ease-out;
 }
 
 @keyframes to-right {
-  from{
+  from {
     left: 1000px;
   }
-  to{
-    left:  0px;
+  to {
+    left: 0px;
   }
 }
 
 /* The game status  */
-#status{
+#status {
   height: 100px;
   display: flex;
   justify-content: space-around;
@@ -120,32 +118,25 @@ i{
 }
 
 /* The game over message  */
-.game-over{
-    /* font-size: 2rem; */
-    text-align: center;
-    margin: 220px 0 0 0;
-
-}
-
-.game-over button{
-  padding: 30px;
-  margin: 20px 0;
+.game-over {
+  text-align: center;
+  margin: 220px 0 0 0;
 }
 
 /* The winning animation */
-.winning-animation{
+.winning-animation {
   position: relative;
   animation: win 0.5s linear;
 }
 
 @keyframes win {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  50%{
+  50% {
     font-size: 2.3rem;
   }
-  100%{
+  100% {
     transform: rotate(360deg);
     font-size: 2rem;
   }
@@ -153,57 +144,115 @@ i{
 
 /* The main game used by the user  */
 #play-game {
-  height: 200px;
+  height: 100%;
+  padding: 60px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid white; */
-  /* margin: 0 500px; */
 }
 
-#play-game button {
-  height: 3rem;
-  width: 6rem;
-  margin: 0 2rem;
+button {
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  height: 48px;
+  padding: 0 16px;
+  text-align: center;
+  transition: box-shadow .15s,transform .15s;
+  margin: 1rem 2rem;
+  font-size: 18px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
 }
 
 /* Animation class for status and play-game  */
 
-.to-top{
+.to-top {
   background-color: black;
-  padding: 10px;
+  padding: 30px;
   position: relative;
   animation: to-top 4s ease-out;
   z-index: 1;
 }
 
 @keyframes to-top {
-  from{
+  from {
     top: 1000px;
   }
-  to{
-    top:0;
+  to {
+    top: 0;
   }
 }
 
 /* Footer  */
-footer{
+footer {
   width: 100%;
   text-align: center;
-  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
   position: relative;
-  /* bottom: 0; */
-  /* height: 70px; */
   z-index: 3;
-  padding: 30px 0;
+  padding: 10px 0;
 }
 
-footer i{
-  font-size: 3rem; 
+footer i {
+  font-size: 2rem;
   margin: 0 10px;
   color: white;
 }
 
+
+/* Media queries to make the site responsive */
+@media (max-height: 1400px) {
+  .container{
+    height: 100%;
+  }
+
+  .score-card{
+    height: 500px;
+  }
+
+  footer{
+    height: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  #play-game{
+    justify-content: space-evenly;
+  }
+
+  #title{
+    font-size: 1rem;
+  }
+
+  .score-card{
+    height: 400px;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  #play-game{
+    font-size: 1rem;
+  }
+
+  button{
+    margin: 0;
+  }
+
+  i{
+    font-size: 8rem;
+  }
+  
+}

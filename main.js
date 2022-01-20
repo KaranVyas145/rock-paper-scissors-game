@@ -55,7 +55,7 @@ const game = () => {
   // Declaring the winner for each move and updating the scores
   function winner(playerChance, computerChance) {
     if (computerChance === playerChance) {
-      document.getElementById("winner").innerHTML = "Its a tie!!!";
+      document.getElementById("winner").innerHTML = "Its a tie!";
     } else if (computerChance === "ROCK") {
       if (playerChance === "SCISSORS") {
         document.getElementById("winner").innerHTML = "Computer Won";
@@ -101,7 +101,7 @@ const game = () => {
   function gameOver(winner) {
     document.getElementById(
       "winner"
-    ).innerHTML = `${winner} won this game <br> <button id="restart">Restart Game</button>`;
+    ).innerHTML = `${winner} won this game ! ! ! <br> <button id="restart">Restart Game</button>`;
     document.getElementById("winner").classList = "game-over winning-animation";
 
     const restart = document.getElementById("restart");
