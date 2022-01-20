@@ -74,7 +74,7 @@
 
 i {
   font-size: 10rem;
-  color: rgb(255, 196, 0);
+  color: rgb(0, 0, 0);
 }
 
 /* Animation class for player score card  */
@@ -140,6 +140,10 @@ i {
     transform: rotate(360deg);
     font-size: 2rem;
   }
+}
+
+#player-choice{
+  transform: rotateY(180deg);
 }
 
 /* The main game used by the user  */
