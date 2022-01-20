@@ -238,6 +238,11 @@ footer i {
     justify-content: space-evenly;
   }
 
+  #title{
+    line-height: 1;
+    font-size: 1rem;
+  }
+
   #title h2{
     display: none;
   }
@@ -265,8 +270,8 @@ footer i {
   }
 
   footer{
-    height: 150px;
-    padding: 50px 0;
+    height: 80px;
+    padding: 20px 0;
   }
   
 }
