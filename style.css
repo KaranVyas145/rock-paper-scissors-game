@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-image: url(images/markus-spiske-iar-afB0QQw-unsplash.jpg);
+    background-image: url(images/main-bg.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,7 +60,7 @@
 }
 
 .score-card{
-  background-image: url(images/etienne-martin-v6uiP2MD6vs-unsplash.jpg);
+  background-image: url(images/score-card-bg.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat ;
