@@ -230,8 +230,16 @@ footer i {
 } */
 
 @media (max-width:600px) {
+  .container{
+    height: 100%;
+  }
+
   #play-game{
     justify-content: space-evenly;
+  }
+
+  #title h2{
+    display: none;
   }
 
   #title{
