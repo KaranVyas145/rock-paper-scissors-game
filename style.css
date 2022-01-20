@@ -239,7 +239,7 @@ footer i {
   }
 
   .score-card{
-    height: 400px;
+    height: 300px;
     font-size: 2rem;
     padding: 10px;
   }
@@ -254,6 +254,11 @@ footer i {
 
   i{
     font-size: 8rem;
+  }
+
+  footer{
+    height: 150px;
+    padding: 50px 0;
   }
   
 }
