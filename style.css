@@ -7,7 +7,7 @@
 /* The main container class containing all the elements  */
 .container {
   color: white;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   font-family: "Architects Daughter", cursive;
   z-index: 1;
